@@ -1,0 +1,79 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\alija\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js
+
+PATH: 
+  C:\Users\alija\AppData\Local\cloud-code\installer\google-cloud-sdk\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Program Files\dotnet\;C:\Users\alija\AppData\Local\Microsoft\WindowsApps;C:\Users\alija\AppData\Roaming\npm;C:\Users\alija\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\alija\.dotnet\tools
+
+Yarn version: 
+  1.22.18
+
+Node version: 
+  16.15.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: ENOENT: no such file or directory, copyfile 'C:\Users\alija\AppData\Local\Yarn\Cache\v6\npm-@backstage-app-defaults-1.0.2-0260b470551ea3ce6ea9d7fae33429bceb41bac4-integrity\node_modules\@backstage\app-defaults\dist\index.esm.js' -> 'C:\Users\alija\.storybook\digital-ocean-stream-music-nfts\ocean-streaming-music-nfts\node_modules\@backstage\app-defaults\dist\index.esm.js'
+
+npm manifest: 
+  {
+    "name": "root",
+    "version": "1.0.0",
+    "private": true,
+    "engines": {
+      "node": "14 || 16"
+    },
+    "scripts": {
+      "dev": "concurrently \"yarn start\" \"yarn start-backend\"",
+      "start": "yarn workspace app start",
+      "start-backend": "yarn workspace backend start",
+      "build": "backstage-cli repo build --all",
+      "build-image": "yarn workspace backend build-image",
+      "tsc": "tsc",
+      "tsc:full": "tsc --skipLibCheck false --incremental false",
+      "clean": "backstage-cli clean && lerna run clean",
+      "diff": "lerna run diff --",
+      "test": "backstage-cli test",
+      "test:all": "lerna run test -- --coverage",
+      "lint": "backstage-cli repo lint --since origin/master",
+      "lint:all": "backstage-cli repo lint",
+      "prettier:check": "prettier --check .",
+      "create-plugin": "backstage-cli create-plugin --scope internal",
+      "remove-plugin": "backstage-cli remove-plugin"
+    },
+    "workspaces": {
+      "packages": [
+        "packages/*",
+        "plugins/*"
+      ]
+    },
+    "devDependencies": {
+      "@backstage/cli": "^0.17.1",
+      "@spotify/prettier-config": "^12.0.0",
+      "concurrently": "^6.0.0",
+      "lerna": "^4.0.0",
+      "prettier": "^2.3.2",
+      "typescript": "~4.6.4"
+    },
+    "resolutions": {
+      "@types/react": "^17",
+      "@types/react-dom": "^17"
+    },
+    "prettier": "@spotify/prettier-config",
+    "lint-staged": {
+      "*.{js,jsx,ts,tsx,mjs,cjs}": [
+        "eslint --fix",
+        "prettier --write"
+      ],
+      "*.{json,md}": [
+        "prettier --write"
+      ]
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
